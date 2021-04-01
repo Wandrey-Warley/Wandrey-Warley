@@ -1,0 +1,19 @@
+.height-sm {
+  height: 50px;
+}
+.height-md {
+  height: 100px;
+}
+.height-lg {
+  height: 150px;
+}
+#caravan:hover, #animais:hover{
+  box-shadow: 0 0 10px 8px rgba(0, 0, 0, .2);
+  
+}
+#caravan, #animais{
+  transition: .5s;
+}
+a{
+  text-decoration: none;
+}
