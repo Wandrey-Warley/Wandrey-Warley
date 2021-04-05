@@ -7,12 +7,18 @@
 .height-lg {
   height: 150px;
 }
-#caravan:hover, #animais:hover{
-  box-shadow: 0 0 10px 8px rgba(0, 0, 0, .2);
+body {
+  /* background: #D99B29 ; */
+}
+#caravan:hover, #animais:hover, #flexblog:hover{
+  box-shadow: 0 0 0 5px #F2BE22;
+  /* border: 2px solid black; */
+  /* outline: 1px solid black; */
   
 }
-#caravan, #animais{
+#caravan, #animais, #flexblog{
   transition: .5s;
+  
 }
 a{
   text-decoration: none;
