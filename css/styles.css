@@ -1,25 +1,42 @@
-.height-sm {
-  height: 50px;
+/* header video{
+  position: fixed;
+  top: 0;
+  z-index: -1;
+} */
+
+@font-face {
+  font-family: Lobster;
+  src: url('../../01-') format('opentype');
 }
-.height-md {
-  height: 100px;
+
+header{
+  background: url("../img/bg-design.jpg") no-repeat center ;
+  position: fixed;
+  width: 100%;
+  height: fit-content;
 }
-.height-lg {
-  height: 150px;
+
+.content {
+  background: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, .3);
+  top: 678px;
+  position: relative;
+  background: #000000ee;
 }
-body {
-  /* background: #D99B29 ; */
+
+.titulo {
+  color:  #fff;
+  font-weight: bold;
+  font-family: "Lobster", Helvetica, sans-serif, monospace;
+  height: 678px;
 }
-#caravan:hover, #animais:hover, #flexblog:hover{
-  box-shadow: 0 0 0 5px #F2BE22;
-  /* border: 2px solid black; */
-  /* outline: 1px solid black; */
-  
-}
-#caravan, #animais, #flexblog{
+
+.titulo h1 {
+  text-shadow: 10px 10px #000000;
   transition: .5s;
-  
 }
-a{
-  text-decoration: none;
+
+.titulo h1:hover {
+  text-shadow: -10px 10px #000000;
+  transition: .5s;
 }
