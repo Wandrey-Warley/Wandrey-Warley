@@ -12,108 +12,164 @@
   <title>Wandrey Warley</title>
 </head>
 <body>
+  <style>
+    #website {
+  display: block;
+}
 
-  <header>
-    <div class="header titulo d-flex justify-content-center ">
-      <h1 class="align-self-center display-1">Wandrey Warley</h1>
-    </div>
+#loading {
+  z-index: 999;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#circleLoading{
+  height: 100px;
+}
+#circleBlackLoading{
+  height: 100px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  animation: load .8s infinite;
+}
+#circleBlack2Loading{
+  height: 100px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  animation: load 1.6s infinite;
+}
+#circleBlack3Loading{
+  height: 100px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  animation: load 2.4s infinite;
+}
+
+@keyframes load {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+  </style>
+  <div id="loading">
+    <img id="circleLoading" src="./img/Elipse 1.svg" alt="">
+    <img id="circleBlackLoading" src="./img/Elipse 2.svg" alt="">
+    <img id="circleBlack2Loading" src="./img/Elipse 2.svg" alt="">
+    <img id="circleBlack3Loading" src="./img/Elipse 2.svg" alt="">
+  </div>
+  <div id="website">
     
-    <!-- <div class="bg_home">
-      <video autoplay loop poster="" width="100%"  class="bg_video">
-        <source src="video/Clouds-bg.mp4" type="video/mp4">
-        <source src="video/Clouds-bg.webm" type="video/webm">
-      </video>   
-    </div>-->
-
-  </header>
-
-  <section class="content pt-5 rounded-top">
-    <div class="container">
-
-      <div class="row justify-content-center">
-        <div class="col col-12 col-md-6">
-          <div class="card">
-            <a href="http://caravan.wandrey-warley.com.br/">
-              <img src="./img/Caravan.png" class="card-img-top" alt="print do site caravan">
-            </a>
-            <div class="card-body">
-                  <h5 class="card-title">Caravan</h5>
+    <header>
+      <div class="header titulo d-flex justify-content-center ">
+        <h1 class="align-self-center display-1">Wandrey Warley</h1>
+      </div>
+      
+      <!-- <div class="bg_home">
+        <video autoplay loop poster="" width="100%"  class="bg_video">
+          <source src="video/Clouds-bg.mp4" type="video/mp4">
+          <source src="video/Clouds-bg.webm" type="video/webm">
+        </video>   
+      </div>-->
+      
+    </header>
+    
+    <section class="content pt-5 rounded-top">
+      <div class="container">
+        
+        <div class="row justify-content-center">
+          <div class="col col-12 col-md-6">
+            <div class="card">
+              <a href="http://caravan.wandrey-warley.com.br/">
+                <img src="./img/Caravan.png" class="card-img-top" alt="print do site caravan">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Caravan</h5>
                 <p class="card-text">Conheça o site Caravan, feito com Bootstrap</p>
               </div>
             </div>
+          </div>
         </div>
-      </div>
-      <div class="row justify-content-center mt-5">
-        <div class="col col-12 col-md-6">
-          <div class="card">
-            <a href="http://animais-fantasticos.wandrey-warley.com.br/">
-              <img src="./img/Animais-Fantasticos.png" class="card-img-top" alt="print do site caravan">
-            </a>
+        <div class="row justify-content-center mt-5">
+          <div class="col col-12 col-md-6">
+            <div class="card">
+              <a href="http://animais-fantasticos.wandrey-warley.com.br/">
+                <img src="./img/Animais-Fantasticos.png" class="card-img-top" alt="print do site caravan">
+              </a>
               <div class="card-body">
                 <h5 class="card-title">Animais Fantasticos</h5>
                 <p class="card-text">Conheça o site Animais Fantasticos, feito com Javascript Puro</p>
               </div>
             </div>
+          </div>
+        </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col col-12 col-md-6">
+          <div class="card">
+            <a href="http://flexblog.wandrey-warley.com.br/">
+              <img src="./img/FlexBlog.png" class="card-img-top" alt="print do site caravan">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">FlexBlog</h5>
+              <p class="card-text">Conheça o site Flexblog, feito com CSS</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row justify-content-center mt-5">
         <div class="col col-12 col-md-6">
           <div class="card">
-              <a href="http://flexblog.wandrey-warley.com.br/">
-                <img src="./img/FlexBlog.png" class="card-img-top" alt="print do site caravan">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">FlexBlog</h5>
-                <p class="card-text">Conheça o site Flexblog, feito com CSS</p>
-              </div>
+            <a href="http://bikecraft.wandrey-warley.com.br/">
+              <img src="./img/bikecraft.png" class="card-img-top" alt="print do site caravan">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">bikecraft</h5>
+              <p class="card-text">Conheça o site Flexblog, feito com webdesign</p>
             </div>
-        </div>
-      </div>
-      <div class="row justify-content-center mt-5">
-        <div class="col col-12 col-md-6">
-          <div class="card">
-              <a href="http://bikecraft.wandrey-warley.com.br/">
-                <img src="./img/bikecraft.png" class="card-img-top" alt="print do site caravan">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">bikecraft</h5>
-                <p class="card-text">Conheça o site Flexblog, feito com webdesign</p>
-              </div>
-            </div>
+          </div>
         </div>
       </div>
       
     </div>
-
+    
     <footer class="bg-primary p-5 mt-5">
       <div class="container">
         <p>
           2021 - Todos os direitos reservados
         </p>
       </div>
-  
+      
     </footer>
   </section>
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
   
 
-
-    
-
-
-  
-
-
-
+	<script type="text/javascript" src="js/jquery3.6.0.min.js"></script>
   <script src="./js/bootstrap.js"></script>
   <!-- <script src="./js/script.js"></script> -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7G0FWK91FK"></script>
+  <script src="./js/script.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
+    
     gtag('config', 'G-7G0FWK91FK');
   </script>
 </body>

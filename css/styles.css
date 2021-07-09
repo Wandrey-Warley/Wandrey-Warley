@@ -1,25 +1,23 @@
-/* header video{
-  position: fixed;
-  top: 0;
-  z-index: -1;
-} */
-
+/* Fonts */
 @font-face {
   font-family: Lobster;
-  src: url('../../01-') format('opentype');
+  src: url('../fonts/Lobster-Regular.ttf') format('truetype');
 }
 
+/* Header do site */
 header{
-  background: url("../img/bg-design.jpg") no-repeat center ;
+  background: url("../img/bg-design.jpg") ;
   position: fixed;
   width: 100%;
   height: fit-content;
+  height: 100vh;
 }
 
+/* Conteudo */
 .content {
   background: #fff;
   box-shadow: 0 0 20px 2px rgba(0, 0, 0, .3);
-  top: 678px;
+  top: 100vh;
   position: relative;
   background: #000000ee;
 }
@@ -28,7 +26,7 @@ header{
   color:  #fff;
   font-weight: bold;
   font-family: "Lobster", Helvetica, sans-serif, monospace;
-  height: 678px;
+  height: 100vh;
 }
 
 .titulo h1 {
