@@ -6,11 +6,15 @@
 
 /* Header do site */
 header{
-  background: url("../img/bg-design.jpg") ;
+  background: url("../img/bg-design.jpg") 0 0;
   position: fixed;
   width: 100%;
   height: fit-content;
   height: 100vh;
+}
+
+#tittle {
+  cursor: pointer;
 }
 
 /* Conteudo */

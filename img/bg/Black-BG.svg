@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#44433a"/>
+      <stop offset="0" stop-color="#2e2d27"/>
+      <stop offset="1" stop-color="#282722"/>
+      <stop offset="1" stop-color="#0e0d0c"/>
+    </linearGradient>
+    <filter id="Retângulo_7" x="-356.221" y="-474.087" width="1732.308" height="1732.308" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#373737"/>
+    </linearGradient>
+    <filter id="Retângulo_8" x="70.846" y="-369.622" width="1798.776" height="1798.776" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Retângulo_9" x="579.779" y="-210.087" width="1732.308" height="1732.308" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#2e2e2e"/>
+    </linearGradient>
+    <filter id="Retângulo_10" x="989.779" y="-30" width="1732.308" height="1732.308" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-4"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-4" x1="0.53" y1="0.34" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#545454"/>
+    </linearGradient>
+    <clipPath id="clip-Black-BG">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Black-BG" clip-path="url(#clip-Black-BG)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Retângulo_7)">
+      <rect id="Retângulo_7-2" data-name="Retângulo 7" width="426" height="1939" transform="translate(1044.86 -444.09) rotate(45)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Retângulo_8)">
+      <rect id="Retângulo_8-2" data-name="Retângulo 8" width="426" height="2033" transform="translate(1538.39 -339.62) rotate(45)" fill="url(#linear-gradient-2)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Retângulo_9)">
+      <rect id="Retângulo_9-2" data-name="Retângulo 9" width="426" height="1939" transform="translate(1980.86 -180.09) rotate(45)" fill="#44433a"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Retângulo_10)">
+      <rect id="Retângulo_10-2" data-name="Retângulo 10" width="426" height="1939" transform="translate(2390.86) rotate(45)" fill="url(#linear-gradient-3)"/>
+    </g>
+    <rect id="Retângulo_11" data-name="Retângulo 11" width="426" height="1939" transform="translate(738.552 -734.087) rotate(45)" fill="url(#linear-gradient-4)"/>
+  </g>
+</svg>
