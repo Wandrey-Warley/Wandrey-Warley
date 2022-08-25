@@ -6,11 +6,12 @@
 
 /* Header do site */
 header{
-  background: url("../img/bg-design.jpg") 0 0;
-  position: fixed;
-  width: 100%;
-  height: fit-content;
   height: 100vh;
+  /*background: url("../img/bg-design.jpg")no-repeat;*/
+  background-position: center center;
+  position: fixed;
+  background-color: black;
+  width: 100%;
 }
 
 #tittle {
@@ -31,14 +32,16 @@ header{
   font-weight: bold;
   font-family: "Lobster", Helvetica, sans-serif, monospace;
   height: 100vh;
+  background: url("../img/bg-design.jpg")no-repeat;
+  background-size: cover;
 }
 
 .titulo h1 {
-  text-shadow: 10px 10px #000000;
-  transition: .5s;
+  text-shadow: 20px 20px #000000;
+  transition: 1s;
 }
 
 .titulo h1:hover {
-  text-shadow: -10px 10px #000000;
+  text-shadow: -20px 20px #000000;
   transition: .5s;
 }
