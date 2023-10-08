@@ -34,6 +34,7 @@ header{
   height: 100vh;
   background: url("../img/bg-design.jpg")no-repeat;
   background-size: cover;
+  flex-direction: column;
 }
 
 .titulo h1 {
@@ -44,4 +45,29 @@ header{
 .titulo h1:hover {
   text-shadow: -20px 20px #000000;
   transition: .5s;
+}
+
+.seta-baixo {
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 50px solid #c8ff00;
+}
+
+.roll {
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+
+  animation: go-down 1s infinite alternate;
+}
+
+@keyframes go-down {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(40px);
+  }
 }

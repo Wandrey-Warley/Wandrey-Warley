@@ -1,0 +1,102 @@
+/* Fonts */
+@font-face {
+  font-family: Lobster;
+  src: url('../fonts/Lobster-Regular.ttf') format('truetype');
+}
+
+/* Header do site */
+header{
+  height: 100vh;
+  background-position: center center;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+
+#tittle {
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+.descricao {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Conteudo */
+.perfil {
+  height: 200px;
+  width: 200px;
+  align-self: center;
+}
+
+.content {
+  background: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, .3);
+  top: 100vh;
+  position: relative;
+  background: #000000ee;
+}
+
+.titulo {
+  color:  #fff;
+  font-weight: bold;
+  font-family: "Lobster", Helvetica, sans-serif, monospace;
+  height: 100vh;
+  background: url("../img/Freepik/gradient-minimalist-background/8270301.jpg")no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.titulo h1 {
+  text-shadow: 20px 20px #000000;
+  transition: 1s;
+}
+
+.titulo h1:hover {
+  text-shadow: -20px 20px #000000;
+  transition: .5s;
+}
+
+.seta-baixo {
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 50px solid #c8ff00;
+}
+
+.roll {
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+
+  animation: go-down 0.8s infinite alternate;
+}
+.roll:hover {
+  animation-play-state: paused;
+  border-top: 50px solid #C1E344;
+}
+
+@keyframes go-down {
+  from {
+    transform: translateY(60px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .titulo h1 {
+    text-shadow: 0px 5px 5px #000;
+    transition: 1s;
+  }
+  .descricao {
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 10px #fff;
+  }
+}
