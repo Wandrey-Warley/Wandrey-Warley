@@ -1,10 +1,215 @@
-/* Fonts */
+/* Fonte personalizada usada no nome principal do header */
 @font-face {
   font-family: Lobster;
   src: url('../fonts/Lobster-Regular.ttf') format('truetype');
 }
 
-/* Header do site */
+:root {
+  --color-accent: #3bc5b2;
+  --color-soft: #e1f5f3;
+  --color-deep: #333a40;
+  --color-bg: #1c1c1c;
+}
+
+/* Bloqueia a rolagem enquanto o loader estiver ativo */
+body.is-loading {
+  overflow: hidden;
+}
+
+/* Mantem o site invisivel ate o carregamento completo */
+#website {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+body.is-loaded #website {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Cria a tela preta de carregamento com foco nas formas geometricas */
+#loading {
+  align-items: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59, 197, 178, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(225, 245, 243, 0.08), transparent 34%),
+    var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 9999;
+  transition: opacity .7s ease, visibility .7s ease;
+}
+
+body.is-loaded #loading {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* Organiza o simbolo central do loader */
+.loading-scene {
+  align-items: center;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  position: relative;
+  width: 150px;
+}
+
+.loading-orb {
+  animation: pulse-orb 2.8s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(59, 197, 178, 0.28), transparent 65%);
+  border-radius: 50%;
+  height: 140px;
+  position: absolute;
+  width: 140px;
+}
+
+.loading-ring {
+  animation: spin-ring 5s linear infinite;
+  border: 1px solid rgba(225, 245, 243, 0.12);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.loading-ring::before {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-soft));
+  border-radius: 999px;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 10px;
+}
+
+.loading-ring-primary {
+  height: 118px;
+  width: 118px;
+}
+
+.loading-ring-secondary {
+  animation-direction: reverse;
+  animation-duration: 7s;
+  height: 82px;
+  width: 82px;
+}
+
+.loading-ring-secondary::before {
+  background: var(--color-deep);
+  box-shadow: 0 0 0 2px rgba(225, 245, 243, 0.08);
+  right: auto;
+  left: 10px;
+  top: auto;
+  bottom: 12px;
+}
+
+.loading-core {
+  animation: breathe-core 2.4s ease-in-out infinite;
+  background: linear-gradient(145deg, var(--color-soft), var(--color-accent));
+  border-radius: 22px;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  height: 34px;
+  position: relative;
+  transform: rotate(45deg);
+  width: 34px;
+}
+
+.loading-copy {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.loading-kicker {
+  color: rgba(225, 245, 243, 0.58);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+}
+
+/* Texto simples para reforcar o estado de carregamento */
+.loading-text {
+  color: var(--color-soft);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.loading-bar {
+  background: rgba(225, 245, 243, 0.12);
+  border-radius: 999px;
+  height: 4px;
+  overflow: hidden;
+  width: min(220px, 56vw);
+}
+
+.loading-bar-fill {
+  animation: loading-progress 1.8s ease-in-out infinite;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-soft));
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+}
+
+@keyframes pulse-orb {
+  0%,
+  100% {
+    opacity: .55;
+    transform: scale(.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin-ring {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes breathe-core {
+  0%,
+  100% {
+    transform: rotate(45deg) scale(.92);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.08);
+  }
+}
+
+@keyframes loading-progress {
+  0% {
+    transform: translateX(-100%);
+    width: 30%;
+  }
+  50% {
+    transform: translateX(35%);
+    width: 45%;
+  }
+  100% {
+    transform: translateX(240%);
+    width: 30%;
+  }
+}
+
+/* Define a area principal do topo ocupando toda a tela */
 header{
   height: 100vh;
   background-position: center center;
@@ -14,10 +219,12 @@ header{
   text-align: center;
 }
 
+/* Ajusta o espacamento do titulo principal e indica interacao com o mouse */
 #tittle {
   cursor: pointer;
   margin-bottom: 60px;
 }
+/* Estiliza o texto de apresentacao abaixo do nome */
 .descricao {
   font-family: 'Times New Roman', Times, serif;
   font-size: large;
@@ -25,13 +232,15 @@ header{
   max-width: 600px;
 }
 
-/* Conteudo */
+/* Define o tamanho da foto de perfil no header */
 .perfil {
+  align-self: center;
+  aspect-ratio: 1 / 1;
   height: 200px;
   width: 200px;
-  align-self: center;
 }
 
+/* Cria a area de conteudo que sobe depois do header */
 .content {
   background: #fff;
   box-shadow: 0 0 20px 2px rgba(0, 0, 0, .3);
@@ -40,6 +249,59 @@ header{
   background: #000000ee;
 }
 
+/* Aumenta o espacamento interno do card de contatos */
+.contato-card {
+  padding: 2rem;
+}
+
+/* Organiza os links de contato em coluna com espaco entre eles */
+.contato-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Estiliza cada botao de contato com visual de link clicavel */
+.contato-link {
+  align-items: center;
+  background: #111;
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+/* Muda a cor e desloca o link quando o mouse passa por cima */
+.contato-link:hover {
+  background: #1f1f1f;
+  color: #c8ff00;
+  transform: translateX(6px);
+}
+
+/* Cria o circulo colorido onde ficam os icones das redes */
+.contato-icone {
+  align-items: center;
+  background: #c8ff00;
+  border-radius: 50%;
+  color: #000;
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}
+
+/* Define o tamanho e a cor dos icones em SVG */
+.contato-icone svg {
+  fill: currentColor;
+  height: 20px;
+  width: 20px;
+}
+
+/* Monta o bloco central do header com fundo e alinhamento vertical */
 .titulo {
   color:  #fff;
   font-weight: bold;
@@ -50,16 +312,15 @@ header{
   flex-direction: column;
 }
 
+/* Aplica a sombra dinamica que sera movida via JavaScript */
 .titulo h1 {
-  text-shadow: 20px 20px #000000;
-  transition: 1s;
+  --shadow-x: 20px;
+  --shadow-y: 20px;
+  text-shadow: var(--shadow-x) var(--shadow-y) 0 #000000;
+  transition: text-shadow .12s ease-out;
 }
 
-.titulo h1:hover {
-  text-shadow: -20px 20px #000000;
-  transition: .5s;
-}
-
+/* Desenha a seta apontando para baixo com bordas */
 .seta-baixo {
   width: 0; 
   height: 0; 
@@ -68,6 +329,7 @@ header{
   border-top: 50px solid #c8ff00;
 }
 
+/* Posiciona e anima a seta para incentivar o scroll */
 .roll {
   align-self: center;
   position: relative;
@@ -75,11 +337,13 @@ header{
 
   animation: go-down 0.8s infinite alternate;
 }
+/* Suaviza a interacao da seta ao passar o mouse */
 .roll:hover {
   animation-play-state: paused;
   border-top: 50px solid #C1E344;
 }
 
+/* Faz a seta subir e descer continuamente */
 @keyframes go-down {
   from {
     transform: translateY(60px);
@@ -89,11 +353,44 @@ header{
   }
 }
 
+/* Ajusta o layout para telas menores, como celulares e tablets */
 @media screen and (max-width: 768px) {
-  .titulo h1 {
-    text-shadow: 0px 5px 5px #000;
-    transition: 1s;
+  .loading-scene {
+    height: 122px;
+    width: 122px;
   }
+
+  .loading-orb {
+    height: 118px;
+    width: 118px;
+  }
+
+  .loading-ring-primary {
+    height: 96px;
+    width: 96px;
+  }
+
+  .loading-ring-secondary {
+    height: 68px;
+    width: 68px;
+  }
+
+  .loading-core {
+    height: 28px;
+    width: 28px;
+  }
+
+  .loading-kicker {
+    letter-spacing: .25em;
+  }
+
+  /* Deixa a sombra do titulo mais leve no mobile */
+  .titulo h1 {
+    --shadow-x: 0px;
+    --shadow-y: 5px;
+    text-shadow: var(--shadow-x) var(--shadow-y) 5px #000;
+  }
+  /* Destaca a descricao em uma caixa para melhorar a leitura */
   .descricao {
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -101,6 +398,7 @@ header{
   }
 }
 
+/* Estiliza o texto de direitos autorais no rodape */
 .direitos p {
   color: white;
   text-align: center;
