@@ -2,31 +2,55 @@
 <html lang="pt-br">
 
 <head>
+  <!-- Configuracoes basicas da pagina -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Arquivos de estilo usados na pagina -->
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/bootstrap.css">
   <link rel="stylesheet" href="./src/css/styles.css">
+  <!-- Icone exibido na aba do navegador -->
   <link rel="shortcut icon" href="./src//img/favicon/black.svg">
 
   <title>Wandrey Warley</title>
 </head>
 
-<body>
+<body class="is-loading">
+
+  <div id="loading" aria-live="polite" aria-label="Carregando pagina">
+    <div class="loading-scene">
+      <div class="loading-orb"></div>
+      <div class="loading-ring loading-ring-primary"></div>
+      <div class="loading-ring loading-ring-secondary"></div>
+      <div class="loading-core"></div>
+    </div>
+    <div class="loading-copy">
+      <p class="loading-kicker">Wandrey Warley</p>
+      <p class="loading-text">Carregando portfolio</p>
+      <div class="loading-bar" aria-hidden="true">
+        <span class="loading-bar-fill"></span>
+      </div>
+    </div>
+  </div>
 
   <div id="website">
 
+    <!-- Header principal com foto, nome e descricao -->
     <header>
       <div class="header titulo d-flex justify-content-center ">
+        <!-- Foto de perfil mostrada no topo do site -->
         <img src="./src/img/Logo/Perfil–white.png" class="perfil" alt="Imagem de perfil">
+        <!-- Nome principal do portfolio -->
         <h1 class="align-self-center display-1" id="tittle">Wandrey Warley</h1>
+        <!-- Pequena apresentacao profissional -->
         <p class="descricao">Olá, sou programador Web, futuro bacharel em Ciência da computação <br>
           Possuo cursos de: JavaScript, jQuery, CSS Flexbox, Wordpress como CMS <br>
           Clique abaixo e conheça um pouco dos meus projetos
         </p>
 
+        <!-- Seta que leva o usuario ate a secao de conteudo -->
         <a href="#content" class="seta-baixo roll"></a>
       </div>
 
@@ -39,9 +63,11 @@
 
     </header>
 
+    <!-- Secao principal com projetos e contatos -->
     <section class="content pt-5 rounded-top" id="content">
       <div class="container">
 
+        <!-- Card do projeto Caravan -->
         <div class="row justify-content-center">
           <div class="col col-12 col-md-6">
             <div class="card">
@@ -55,6 +81,7 @@
             </div>
           </div>
         </div>
+        <!-- Card do projeto Animais Fantasticos -->
         <div class="row justify-content-center mt-5">
           <div class="col col-12 col-md-6">
             <div class="card">
@@ -68,6 +95,7 @@
             </div>
           </div>
         </div>
+        <!-- Card do projeto FlexBlog -->
         <div class="row justify-content-center mt-5">
           <div class="col col-12 col-md-6">
             <div class="card">
@@ -81,6 +109,7 @@
             </div>
           </div>
         </div>
+        <!-- Card do projeto Bikecraft -->
         <div class="row justify-content-center mt-5">
           <div class="col col-12 col-md-6">
             <div class="card">
@@ -94,13 +123,55 @@
             </div>
           </div>
         </div>
+        <!-- Card com links para as redes de contato -->
+        <div class="row justify-content-center mt-5">
+          <div class="col col-12 col-md-6">
+            <div class="card">
+              <div class="card-body contato-card">
+                <h5 class="card-title">Contato</h5>
+                <p class="card-text">Me encontre nas redes abaixo:</p>
+                <div class="contato-links">
+                  <!-- Link para o perfil do LinkedIn -->
+                  <a href="https://www.linkedin.com/in/wandrey-warley" target="_blank" rel="noopener noreferrer" class="contato-link">
+                    <span class="contato-icone" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <path d="M6.94 8.5H3.56V20h3.38zM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3m7.02 5.5H9.03V20h3.24v-6.03c0-1.6.3-3.16 2.29-3.16 1.96 0 1.98 1.83 1.98 3.27V20h3.25v-6.59c0-3.24-.7-5.74-4.48-5.74-1.82 0-3.03 1-3.52 1.95h-.05z" />
+                      </svg>
+                    </span>
+                    <span>LinkedIn</span>
+                  </a>
+                  <!-- Link direto para conversa no WhatsApp -->
+                  <a href="https://wa.me/5562984334220" target="_blank" rel="noopener noreferrer" class="contato-link">
+                    <span class="contato-icone" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.59 5.96L0 24l6.33-1.66a11.87 11.87 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.18-3.45-8.42M12.07 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.76.99 1-3.66-.24-.38a9.87 9.87 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.01 2.91a9.85 9.85 0 0 1 2.9 7.01c0 5.47-4.45 9.92-9.91 9.92m5.44-7.41c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18-.35.22-.65.08a8.06 8.06 0 0 1-2.37-1.46 8.93 8.93 0 0 1-1.64-2.03c-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.08-.8.38s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.1 3.22 5.08 4.51.71.31 1.27.5 1.7.63.71.23 1.35.2 1.86.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.08-.13-.28-.2-.57-.35" />
+                      </svg>
+                    </span>
+                    <span>WhatsApp</span>
+                  </a>
+                  <!-- Link para o perfil do Instagram -->
+                  <a href="https://www.instagram.com/wandrey_warley/" target="_blank" rel="noopener noreferrer" class="contato-link">
+                    <span class="contato-icone" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2m0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95zm9.45 1.35a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1M12 6.86A5.14 5.14 0 1 1 6.86 12 5.14 5.14 0 0 1 12 6.86m0 1.8A3.34 3.34 0 1 0 15.34 12 3.34 3.34 0 0 0 12 8.66" />
+                      </svg>
+                    </span>
+                    <span>Instagram</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
+      <!-- Rodape do site -->
       <footer class="bg-primary p-5 mt-5">
         <div class="container direitos">
-          <p>
-            2023 - Todos os direitos reservados
+          <!-- Texto de direitos autorais com ano preenchido via JavaScript -->
+          <p id="footer-year">
+            Todos os direitos reservados
           </p>
         </div>
 
@@ -118,16 +189,66 @@
   </div>
 
 
+  <!-- Biblioteca jQuery -->
   <script type="text/javascript" src="js/jquery3.6.0.min.js"></script>
+  <!-- Biblioteca Bootstrap para componentes e comportamentos prontos -->
   <script src="./src/js/bootstrap.js"></script>
+  <!-- Controla a tela de loading ate o carregamento completo da pagina -->
+  <script src="./src/js/script.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-71KB8DHSY9"></script>
   <script>
+    // Cria a estrutura base usada pelo Google Analytics.
     window.dataLayer = window.dataLayer || [];
+    // Envia eventos para o Google Analytics.
     function gtag() { dataLayer.push(arguments); }
+    // Inicia o Analytics com a data atual.
     gtag('js', new Date());
 
+    // Define o identificador da propriedade do Analytics.
     gtag('config', 'G-71KB8DHSY9');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Busca os elementos que serao controlados pelo JavaScript.
+    const title = document.getElementById('tittle');
+    const footerYear = document.getElementById('footer-year');
+
+    // Aplica o efeito de sombra dinamica no titulo principal.
+    if (title) {
+      // Atualiza a direcao da sombra conforme a posicao do mouse.
+      // Usando requestAnimationFrame para suavizar o calculo durante o movimento
+      const updateShadow = (event) => {
+        const { innerWidth, innerHeight } = window;
+        const centerX = innerWidth / 2;
+        const centerY = innerHeight / 2;
+        const offsetX = ((event.clientX - centerX) / centerX) * -24;
+        const offsetY = ((event.clientY - centerY) / centerY) * -24;
+
+        requestAnimationFrame(() => {
+          title.style.setProperty('--shadow-x', `${offsetX.toFixed(2)}px`);
+          title.style.setProperty('--shadow-y', `${offsetY.toFixed(2)}px`);
+        });
+      };
+
+      // Restaura a sombra padrao quando o mouse sai da janela.
+      const resetShadow = () => {
+        title.style.setProperty('--shadow-x', '20px');
+        title.style.setProperty('--shadow-y', '20px');
+      };
+
+      // Escuta o movimento do mouse na tela.
+      window.addEventListener('mousemove', updateShadow);
+      // Reseta a sombra ao sair da area do navegador.
+      window.addEventListener('mouseleave', resetShadow);
+    }
+
+    // Escreve automaticamente o ano atual no rodape.
+    if (footerYear) {
+      const currentYear = new Date().getFullYear();
+      footerYear.textContent = `${currentYear} - Todos os direitos reservados`;
+    }
+    });
   </script>
 </body>
 
